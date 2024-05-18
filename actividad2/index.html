@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- metadatos-->
+    <meta name="author" content="Zareth Galvan">
+    <meta name="keywords" content="practica, loros"> 
+    <meta name="description" content="actividad practica CSS - flexbox y grid">
+
+    <!-- Link de estilos de la página-->
+    <link rel="stylesheet" href="./styles/index.css">
+
+<!-- Link de estilos de la página-->
+<link rel="shortcut icon" href="./assets/logo/favicon.webp" type="image/x-icon">
+
+	<title>Práctica 2</title>
+</head>
+<body>
+	<!-- inicio header - Encabezado -->
+
+    <header>
+        <nav class="menuNavegacion">
+            <!-- Nuestro Logo -->
+            <!-- Etiquetas No semánticas Se utlizan principalmente paradar estilo div y span  -->
+                <div class="logo">
+                <a href="#">
+                    <img class="img-logo"  src="./assets/logo/logo.webp" alt="logo">
+                    <p class="p-logo">Looking for <span class="span-logo"> freedom </span></p>
+                    
+                </a>
+
+
+                </div>
+
+                <!-- Lista -> Menú de navegación -->
+
+                <ul class="listaMenu">
+                    <li><a href="#">inicio</a></li>
+                    <li><a href="#">Proyecto</a></li>
+                    <li><a href="#"> Sobre nosotros</a></li>
+                    <li><a href="#"> Aliados</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                </ul>
+
+        </nav>
+    </header>
+    <main>
+
+    <!-- seccion de contenido principal -->
+    <!-- etiqueta con punto permite colococar la clase de una: shortcut -->
+
+            <section class="contenedorPrincipal">
+                <h1>Proyecto: Tomemos conciencia</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, veniam!</p>
+                
+                <article class="contenedorImagenes">
+
+                        <div class="imagenes img1"><img src="./assets/images/img1.webp" alt="Img-proyecto">
+                            <div class="parrafo-img">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eligendi saepe numquam autem totam, nulla illum ducimus quibusdam laudantium tempore? Cum ab libero similique delectus nisi tempore, minus sunt laboriosam!</p>
+                                </div>
+                        </div>
+                        <div class="imagenes img2"><img src="./assets/images/img2.webp" alt="Img-Proyecto">
+                            <div class="parrafo-img">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eligendi saepe numquam autem totam, nulla illum ducimus quibusdam laudantium tempore? Cum ab libero similique delectus nisi tempore, minus sunt laboriosam!</p>
+                                </div>
+                            </div>
+                        <div class="imagenes img3"><img src="./assets/images/img3.webp" alt="Img-Proyecto">
+                            <div class="parrafo-img">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eligendi saepe numquam autem totam, nulla illum ducimus quibusdam laudantium tempore? Cum ab libero similique delectus nisi tempore, minus sunt laboriosam!</p>
+                                </div>                        
+                             </div>
+                        <div class="imagenes img4"><img src="./assets/images/img4.webp" alt="Img-Proyecto">
+                            <div class="parrafo-img">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eligendi saepe numquam autem totam, nulla illum ducimus quibusdam laudantium tempore? Cum ab libero similique delectus nisi tempore, minus sunt laboriosam!</p>
+                                </div>
+                            </div>
+                        <div class="imagenes img5"><img src="./assets/images/img7.webp" alt="Img-Proyecto">
+                            <div class="parrafo-img">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eligendi saepe numquam autem totam, nulla illum ducimus quibusdam laudantium tempore? Cum ab libero similique delectus nisi tempore, minus sunt laboriosam!</p>
+                            </div>
+                        </div>
+                </article>
+            </section>
+
+            <section class="contenedorFlex">
+
+                <div class="flex-hijo">Caja 1</div>
+                <div class="flex-hijo">Caja 2</div>
+                <div class="flex-hijo">Caja 3</div>
+                <div class="flex-hijo">Caja 4</div>
+                <div class="flex-hijo">Caja 5</div>
+            </section>
+
+
+    </main>
+    <footer>
+        <p>Práctica de desarrollo creada por &copy; Zareth G - 2024</p>
+    </footer>
+</body>
+</html>

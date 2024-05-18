@@ -1,0 +1,232 @@
+/* Esto es comentario en CSS */
+/*Guía paso a paso, qué les recomiendo pra trabajar en CSS
+1. Verifique que haya vinculado su css al html
+body{background-color: rgb(231, 237, 237);}
+
+
+2. Tengan un orden definido
+
+CSS -> Hoja de estilos en cascada: debe ir hacia abajo 
+
+Etiqueta general
+Clases mas especificas varios elementos pueden tener la misma clase
+Id: sumamente especificos, solo pueden tenen uno 
+Pseudoelementos
+*/
+
+
+/*
+
+header{
+    width: 100%;
+    height: 50vh;;
+    border: solid red;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');*/
+
+/*@import url('https://fonts.cdnfonts.com/css/tarrget');
+
+
+body{
+    background-color: rgb(231, 237, 237);
+    font-family: 'Tarrget Outline', sans-serif;
+}
+
+
+.tituloPrincipal{
+    background-color: blue;
+
+}
+#unico{
+    color: blueviolet;
+}
+PSEUDOCLASES: Elementos propios de CSS que hacen referencia a mi html -> caracteristicas particular  por ejemplo :root
+
+PSEUDOELEMENTOS Ejemplo ::after
+*/
+
+
+:root{
+--tipografia:"Lato", sans-serif;
+--colorFondo:#ddedf9 ;
+--colorClaro:#e3f1ee; 
+--colorTexto:#434748;
+--colorContraste:#fcf4dd;
+
+}
+/*Condiciones iniciales*/
+/* * es selector universal -> Aplica estilos a todo */ 
+
+*{
+/*margin margen externo*/
+margin: 0;
+/*padding margen interno*/
+padding: 0;
+
+}
+body{
+    border: solid var(--colorTexto);
+    width: 100%;
+/*solid es el tipo de linea*/
+
+    /*background-color: color de fondo*/
+
+   
+    background-color: var(--colorFondo);
+
+    /*tipografía*/
+
+    font-family: var(--tipografia);
+
+    color: var(--colorTexto);
+
+    overflow-x: hidden;
+
+    box-sizing: border-box; /*ajustar al tamaño de pantalla*/
+}
+
+/*  -----------  HEADER  ----------- es un contenedor padre donde se deben determinar las dimensiones de los espacios */
+
+header{ 
+    border: 5px solid rgb(0, 255, 76);
+    width: 100vw; 
+    height: 100vh;
+    /*vw hace referencia a ancho de pantalla*/
+}
+/*Lo que está dentro del header son hijos*/
+
+.menuNav{
+    background-color: var(--colorClaro);
+    width: 100%;
+    height: 20%;
+    /*border: 5px solid blue ;
+    disposicion flexible: los elementos unos al lado del otro */
+}
+.listaMenu{
+    height: 100%;
+    border: 5px solid red;
+    display: flex;
+    /*centrar */
+    /*centrar en x simpre va al papa */
+    justify-content: center;
+    /*centrar en y  siempre va al papa*/
+    align-items: center;
+    /*Separacion entre elementos hijos */ 
+    gap:30px;
+}
+.listaMenu a{
+/*quitar decoracion del texto (linea debajo) */
+
+text-decoration: none;
+/* Color del texto*/
+color: var(--colorTexto);
+/* Tamaño del texto*/
+font-size: 15px;
+/* Tamaño de letra*/
+font-weight: bold;
+}
+
+.listaMenu a:hover{ 
+    color: white;}
+ /*Letra cambia a blanco cuando se pase el mouse por encima*/
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+/*banner*/
+.banner{
+    border: 5px solid violet
+    width:100%;
+    height:80%;
+}
+
+.banner img{
+    width:100%;
+    height:100%;
+}
+
+
+/* --------------  MAIN  --------------  */
+
+main{
+border:5px solid red;
+width:100%;
+height:auto;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}    
+/*Sección 1*/
+.seccion1{
+    border: 3px solid green;
+    width:80%;
+}
+
+
+/*Sección 2*/
+
+.seccion2{
+    border: 5px solid blue;
+    width:80%;
+    height: auto;
+    margin: 50px 30px;
+}
+
+
+.imagenLibro{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.imagenLibro img{
+        width: 100%;
+    
+}
+.titulo{
+
+    /*centrar texto*/
+    text-align: center;
+/*texto en mayuscula*/
+text-transform: uppercase;
+
+/*margen al titulo*/
+margin: 20px 0px;
+
+}
+
+footer{
+
+    border: 5px solid var (--colorContraste);
+    width:100%;
+    height:auto;
+    background-color: aqua;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly; /* space between or around*/
+    /*gap:50px;*/
+    align-items: center;
+    color: white;
+
+
+}
+.logo2{
+    width:100px;
+    height: 100px;
+}
+
+
+.redeSociales{
+border: solid red;
+text-align: center;
+}
+
+i{
+    color:white;
+}
