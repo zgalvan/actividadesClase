@@ -1,0 +1,102 @@
+/*Importaciones - Fuentes */
+
+
+
+/* Establecer las varianles en nuestros CSS
+paleta de colores
+tipogragias
+medidas (opcional)
+*/
+:root{ /* hace referencia a archivo html archivo raiz*/
+    /*Paleta de colores*/
+
+    --colorFondo: beige;
+    --colorClaro: lightsalmon;
+    --colorEnfasis:#A4AE20;
+    --tipografia: 'Arial Narrow', Arial, sans-serif;
+
+}
+*{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+}
+
+body{
+    background-color: var(--colorFondo);
+    font-family: var(--tipografia);
+    font-size: 25px;
+    overflow-x: hidden;
+    
+}   
+
+header {
+    border: solid red;
+    width: 100vw; 
+    height: 100%;
+   
+  }
+
+.titulo{ 
+    height: 150px;
+    width: 100%;
+    background-color: var(--colorEnfasis);
+    display: grid;
+    place-content: center;  /*sirve unicamente para centrar en display grid. Para centrar con FLEX utilizamos justify content y align content*/
+    color: var(--colorFondo);
+}  
+
+/*carrusel de imagenes*/
+
+.contenedor-slider{ /*contenedor general*/
+
+    border: solid 5 px var(--colorEnfasis);
+    width: 1000px;
+    height: 500px;
+    /*sirve para centrar contenedor. NO contenido*/
+    margin: 100px auto;
+    overflow-x: scroll;
+}
+
+.slider{
+    width: 100%;  /*también se pueden poner las mismas dimensiones del padre, en este caso width: 1000px and height: 500px; */
+    height: 100%;
+    display: flex;
+    /*las animaciones deben hacerse en el contenedor directo dond eespecifico como se debe mover*/
+    animation-name: deslizar; /*nombre que se conecta con el keyframe*/
+    /*tiempo de duracion*/
+    animation-duration: 5s;
+    /*cuantas veces queremos que se repita la animación*/
+    animation-iteration-count: infinite;
+    /* como queremos que se de el movimiento*/
+    animation-timing-function:  ease-in-out;
+}
+
+/* vamos aponer a funcionar la animación*/
+/* 0% 50% 100%
+from to */
+
+@keyframes deslizar{
+    from{
+        transform: translate(0%);
+    }
+
+    to{
+        transform: translate(-100%);
+
+    }
+}
+
+.contenedor-slider img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer{
+        height: 150px;
+        width:100%;
+        background-color: var(--colorEnfasis);
+        
+    }
