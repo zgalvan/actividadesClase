@@ -31,8 +31,7 @@ body{
 }   
 
 header {
-    border: solid red;
-    width: 100vw; 
+      width: 100vw; 
     height: 100%;
    
   }
@@ -44,18 +43,36 @@ header {
     display: grid;
     place-content: center;  /*sirve unicamente para centrar en display grid. Para centrar con FLEX utilizamos justify content y align content*/
     color: var(--colorFondo);
+    transition: all 500ms ease-in-out;
 }  
+
+/* para que cambie el color cuando pasa el mouse
+.titulo:hover{
+background-color: brown;
+color: chartreuse;
+transform: scale(1.2);
+}  */
+
+/* para que cambie el color cuando pasa el mouse  */
+.titulo:active{
+    background-color: brown;
+    color: chartreuse;
+    transform: scale(1.2);
+    }
 
 /*carrusel de imagenes*/
 
 .contenedor-slider{ /*contenedor general*/
 
     border: solid 5 px var(--colorEnfasis);
-    width: 1000px;
-    height: 500px;
+
+    /*Para responsive no usar valores fijos como px si no valores relativo como % y vh*/
+    width: 75%;
+    height: 65vh;
+   
     /*sirve para centrar contenedor. NO contenido*/
     margin: 100px auto;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 .slider{
@@ -65,38 +82,146 @@ header {
     /*las animaciones deben hacerse en el contenedor directo dond eespecifico como se debe mover*/
     animation-name: deslizar; /*nombre que se conecta con el keyframe*/
     /*tiempo de duracion*/
-    animation-duration: 5s;
+    animation-duration: 10s;
     /*cuantas veces queremos que se repita la animación*/
     animation-iteration-count: infinite;
     /* como queremos que se de el movimiento*/
     animation-timing-function:  ease-in-out;
+    /* dirección de la animación */
+    animation-direction: alternate;
 }
 
 /* vamos aponer a funcionar la animación*/
 /* 0% 50% 100%
 from to */
 
+/* Rotación */
+/*
+@keyframes rotar{
+from{
+    transform: rotate(0deg);
+}
+to{
+
+    transform: rotate(-360deg);
+}
+}
+*/
+/*
+@keyframes escala {
+    from{
+        transform: scale(0.4);
+    }
+    to{
+
+        transform: scale(1.7);
+    }
+
+}*/
+
+/* Carrusel */
+  
 @keyframes deslizar{
     from{
         transform: translate(0%);
     }
+50%{
 
-    to{
-        transform: translate(-100%);
+    transform: translate(-150%);
+}
+
+to{
+        transform: translate(-300%);
 
     }
 }
-
+ 
 .contenedor-slider img{
 
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+main{
+display: flex;
+justify-content: center;
+}
 
+.contenido{
+border: solid 5px var(--colorEnfasis);
+width:75%;
+height: auto;
+margin-bottom: 100px;
+
+}
+
+.tituloSecundario{
+    text-align: center;
+    padding: 25px;
+    
+}
+
+.imgParrafo{
+   
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    padding: 15px;
+}
+
+/*  yo puedo llamar a varios elementos del html a los que le voy a aplicar los mismos estilos solo separandolos por coma*/
+
+.imgParrafo img, 
+.imgParrafo p{
+    width:50%;
+    height: 100%;
+}
 footer{
         height: 150px;
         width:100%;
         background-color: var(--colorEnfasis);
-        
-    }
+        /* Alternativa para centrar un elemento */
+        display: grid;
+        /* Centra x y */
+        place-content: center;
+        color: var(--colorFondo)
+            }
+
+            /* Diseño Responsive */
+
+            /* 
+            1. Trabajen en %
+            2. Media Queries (que van al final de todo): pemriten cambiar la apariencia de los elemntos en función del tamaño de la pantalla
+            */
+
+            /* Media Queries 
+            
+            
+            dimensión minimo pc --> 1200px
+            dimensión minimo tablet --> 500px ->1024px
+            dimensión celular --> 320px -> 490px
+            */
+
+            /* Estilos para celular: estilos nuevos según los px que se definan */
+
+            @media screen and (max-width:490px){
+                    /* body{
+                       background-color:blue;
+                          } */
+
+                          .titulo{
+                            font-size: 20px;
+                            text-align: center;
+                          }
+                          .imgParrafo{
+                            display: flex;
+                            flex-direction:column;
+
+                          }
+                          .imgParrafo img, 
+                            .imgParrafo p{
+                            width:100%;
+                        }
+
+
+            }
