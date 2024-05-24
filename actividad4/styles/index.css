@@ -16,3 +16,29 @@
     /*posicion la vista de la imagen*/
     object-position: top;
 }
+
+.misLogos img{
+    width: 100px;
+    height: 100px;
+}
+
+/* .col, .col-4, .col-6{
+      text-align: center;
+} */
+
+.misLogos div{
+        text-align: center;
+
+}
+/* 
+.row{
+    text-align: center; 
+    margin: 5px;
+    padding:0%;  
+} */
+
+.misProductos img{
+    width: 250px;
+    height: 250px;
+
+}
